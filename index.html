@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kishore Garimella | Buyer Profile</title>
+<meta name="description" content="Kishore Garimella is an SBA pre-qualified buyer actively searching for a well-run B2B service business in the Greater Houston area.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F7F4EE;
+  --white:#FFFFFF;
+  --sage:#87A08C;
+  --sage-dark:#6E8873;
+  --ink:#141414;
+  --body:#555550;
+  --hairline:#E3DFD6;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Inter',-apple-system,Segoe UI,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:300;color:var(--body);background:var(--cream);font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+h2.section{font-family:var(--serif);font-size:clamp(28px,4vw,40px);color:var(--ink);font-weight:500;letter-spacing:.02em;text-transform:uppercase;margin-bottom:40px}
+h2.section em{font-style:italic;color:var(--sage-dark);font-weight:400}
+section{padding:90px 0}
+
+/* top + bottom bars */
+.bar{background:var(--ink);color:#EDEAE2;padding:14px 0}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center}
+.bar .label{color:#EDEAE2}
+.bar .label .dot{color:var(--sage)}
+
+/* hero */
+.hero{background:var(--white);padding:0}
+.hero .wrap{max-width:none;padding:0;display:grid;grid-template-columns:1fr 1fr;min-height:620px}
+.hero-text{display:flex;flex-direction:column;justify-content:center;padding:80px 8vw 60px}
+.badges{display:flex;align-items:center;gap:14px;margin-bottom:22px;flex-wrap:wrap}
+.badges .rule{width:56px;height:1px;background:var(--hairline)}
+.badge{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--body)}
+.badge.pill{background:var(--sage);color:var(--white);padding:5px 12px;border-radius:2px}
+.hero h1{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(56px,7vw,92px);color:var(--sage-dark);line-height:1;margin-bottom:26px}
+.hero p{max-width:46ch}
+.hero-stats{display:flex;gap:48px;margin-top:44px;padding-top:30px;border-top:1px solid var(--hairline)}
+.stat .num{font-family:var(--serif);font-size:30px;color:var(--ink)}
+.stat .label{color:#8A867C;margin-top:2px}
+.hero-img{min-height:460px;background:#ECECEC}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+
+/* readiness band */
+.band{background:var(--sage);color:var(--white);padding:26px 0}
+.band .wrap{display:flex;align-items:center;gap:6vw;flex-wrap:wrap}
+.band .label{opacity:.85}
+.band .cell{border-left:1px solid rgba(255,255,255,.3);padding-left:3vw}
+.band .cell:first-of-type{border-left:none;padding-left:0}
+.band .big{font-family:var(--serif);font-size:22px;line-height:1.2}
+.band small{display:block;font-size:12px;opacity:.85}
+
+/* buyer story */
+.story-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:70px;align-items:start}
+.story p{margin-bottom:22px}
+.story .vision{margin-top:6px}
+.story .vision strong{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-direction:column;gap:16px}
+.chip{display:flex;gap:16px;align-items:flex-start;background:var(--white);border:1px solid var(--hairline);border-radius:4px;padding:18px 20px;font-size:13.5px;line-height:1.6}
+.chip .ico{flex:0 0 34px;height:34px;border-radius:50%;background:#EDF1EC;color:var(--sage-dark);display:flex;align-items:center;justify-content:center;font-size:15px}
+
+/* highlights */
+.alt{background:#FBF9F5}
+.hl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.hl{background:var(--white);border:1px solid var(--hairline);border-left:3px solid var(--sage);border-radius:3px;padding:24px 26px;font-size:13.5px;line-height:1.65}
+
+/* sellers */
+.sell-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--hairline)}
+.sell{padding:36px 34px 36px 0;border-left:1px solid var(--hairline);padding-left:34px}
+.sell:first-child{border-left:none;padding-left:0}
+.sell h3{font-family:var(--serif);font-size:20px;color:var(--ink);font-weight:500;margin-bottom:12px}
+.sell p{font-size:13.5px}
+.quote{margin-top:70px;background:var(--sage);color:var(--white);padding:56px 7%;border-radius:3px}
+.quote p{font-family:var(--serif);font-style:italic;font-size:clamp(17px,2vw,22px);line-height:1.8;text-align:center}
+
+/* criteria */
+.crit-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:56px;align-items:start}
+.crit-label{color:#8A867C;margin:34px 0 6px}
+.crit-label:first-child{margin-top:0}
+.row{display:grid;grid-template-columns:150px 1fr;gap:28px;padding:16px 0;border-bottom:1px solid var(--hairline);font-size:13.5px}
+.row .k{color:var(--ink);font-weight:500}
+.row .v{text-align:right;color:var(--ink)}
+.row .v span{font-weight:400;color:var(--body)}
+.geo{background:var(--white);border:1px solid var(--hairline);border-radius:4px;padding:34px}
+.geo h3{font-family:var(--serif);font-size:21px;color:var(--ink);font-weight:500;line-height:1.5;margin:10px 0 18px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.pill-tag{background:#EDF1EC;color:var(--sage-dark);font-size:11.5px;font-weight:500;padding:6px 12px;border-radius:999px}
+.geo p{font-size:13px}
+
+/* industry */
+.ind-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.ind-list{list-style:none;margin-top:14px}
+.ind-list li{padding:13px 0;border-bottom:1px solid var(--hairline);color:var(--ink);font-size:14px;display:flex;align-items:center;gap:12px}
+.ind-list li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--sage);flex-shrink:0}
+.ex-list li{color:#A9A49A;text-decoration:line-through}
+.ex-list li::before{background:#D8D3C8;border-radius:0;height:1px;width:10px}
+.ind-note{font-size:12.5px;font-style:italic;margin-top:18px;color:#8A867C}
+
+/* transition */
+.tr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tr{background:var(--white);border:1px solid var(--hairline);border-radius:3px;padding:32px 30px}
+.tr h3{font-family:var(--serif);font-style:italic;font-size:30px;color:var(--sage-dark);font-weight:500;margin-bottom:6px}
+.tr .label{color:#8A867C;margin-bottom:14px;display:block}
+.tr p{font-size:13.5px}
+
+/* cta */
+.cta .label{color:#8A867C;margin-bottom:18px;display:block}
+.cta .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:50px;align-items:center}
+.cta h2{font-family:var(--serif);font-size:clamp(30px,4.4vw,46px);color:var(--ink);font-weight:500;text-transform:uppercase;line-height:1.25}
+.cta h2 em{color:var(--sage-dark)}
+.btns{display:flex;flex-direction:column;gap:12px;align-items:stretch}
+.btn{display:block;text-align:center;text-decoration:none;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:16px 28px;border-radius:2px}
+.btn.primary{background:var(--sage);color:var(--white)}
+.btn.primary:hover{background:var(--sage-dark)}
+.btn.ghost{background:var(--white);color:var(--ink);border:1px solid var(--hairline)}
+.btn.ghost:hover{border-color:var(--sage)}
+
+.bar.foot{padding:18px 0}
+.bar.foot .mid{opacity:.6;font-size:11px;letter-spacing:.05em}
+
+@media(max-width:900px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-img{order:-1;min-height:380px}
+  .hero-text{padding:50px 32px 60px}
+  .story-grid,.crit-grid,.ind-grid,.cta .wrap{grid-template-columns:1fr;gap:44px}
+  .hl-grid,.tr-grid{grid-template-columns:1fr}
+  .sell-grid{grid-template-columns:1fr}
+  .sell{border-left:none;padding-left:0;border-top:1px solid var(--hairline)}
+  .sell:first-child{border-top:none}
+  .row .v{text-align:left}
+  .row{grid-template-columns:1fr;gap:4px}
+  section{padding:64px 0}
+  .band .cell{border-left:none;padding-left:0}
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap">
+    <span class="label"><span class="dot">&bull;</span> ANUKI PARTNERS</span>
+    <span class="label"><span class="dot">&bull;</span> ACTIVE &amp; SEARCHING</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="badges">
+        <span class="rule"></span>
+        <span class="badge">Buyer Profile</span>
+        <span class="badge pill">&#9734; SBA Pre-Qualified</span>
+      </div>
+      <h1>Kishore</h1>
+      <p>Kishore is a Katy, Texas-based operations leader and entrepreneur who is actively searching for his next business to acquire and run. He is SBA prequalified and backed by an experienced acquisition team ready to move. With roughly 30 years of experience across engineering, operations, consulting, and commercial leadership in the energy industry, Kishore brings a rare combination of big-company discipline and small-business grit. He has led large teams, negotiated complex contracts across multiple countries, and co-founded a wellness business that taught him firsthand what it takes to run something from the ground up. He is ready now, motivated, and looking for a well-run business in the Greater Houston area where he can step in as a hands-on owner, take care of the people, and build something that lasts.</p>
+      <div class="hero-stats">
+        <div class="stat"><div class="num">$375K+</div><div class="label">Minimum SDE</div></div>
+        <div class="stat"><div class="num">5</div><div class="label">Experience Highlights</div></div>
+      </div>
+    </div>
+    <div class="hero-img"><img src="headshot.jpg" alt="Kishore Garimella"></div>
+  </div>
+</div>
+
+<!-- READINESS BAND -->
+<div class="band">
+  <div class="wrap">
+    <span class="label">Financial Readiness</span>
+    <div class="cell"><div class="big">$375K+</div><small><strong>Minimum SDE</strong> &mdash; Established Cash Flow Required</small></div>
+    <div class="cell"><div class="big">Ready</div><small><strong>Close Readiness</strong> &mdash; Full Acquisition Team In Place</small></div>
+  </div>
+</div>
+
+<!-- BUYER STORY -->
+<section>
+  <div class="wrap">
+    <h2 class="section">The Buyer <em>Behind</em> the Profile</h2>
+    <div class="story-grid">
+      <div class="story">
+        <p>Kishore's career tells a story of someone who keeps showing up and figuring things out, no matter how unfamiliar the situation. Early on, he managed a 150-person construction team on refinery and petrochemical projects, coordinating crews, schedules, and start-ups. Later, he built an entirely new commercial capability inside a major energy company, growing it from zero to a five-person team and creating a training program that ran for seven years across five countries.</p>
+        <p>He has negotiated with governments, managed joint ventures, and led sourcing efforts that saved real money. But he has also gotten his hands dirty. Kishore co-founded a small wellness business where he handled everything from hiring to marketing to daily operations. That experience showed him exactly what he loves about running a business and where he wants help.</p>
+        <p>Over the past year, Kishore has been searching full-time. He has gone deep on several opportunities, walked operations, built roadmaps alongside owners, and submitted offers. He is not browsing. He is doing the work.</p>
+        <p>Rooted in Katy with his wife and two kids, Kishore is active in his community. He serves as president of his neighborhood HOA, co-facilitates a CEO roundtable, advises small businesses through Silver Fox Advisors, and volunteers with a local homeless shelter. He wants a business that lets him be present for his family, take care of employees, and build something he is proud of.</p>
+        <p class="vision"><strong>Vision:</strong> Kishore wants to step into a business that already works and build on what is already there, bringing calm leadership, strong systems, and a genuine commitment to the people who made this business successful. His goal is to protect what the seller built, create growth, and carry the business forward in a way his family and employees can feel proud of. At its heart, this is also personal. Kishore wants to show his children that following your convictions and betting on what you believe in ultimately pays off.</p>
+      </div>
+      <div class="chips">
+        <div class="chip"><span class="ico">&#9873;</span>Led a 150+ person construction team on refinery and petrochemical projects, managing crews, planning, and unit start-ups.</div>
+        <div class="chip"><span class="ico">&#9881;</span>Built a new commercial team from scratch inside a major energy company and created a training program that ran for seven years across five countries.</div>
+        <div class="chip"><span class="ico">&#9878;</span>Negotiated complex contracts with governments, joint venture partners, and commercial counterparties across multiple industries and geographies.</div>
+        <div class="chip"><span class="ico">&#10148;</span>Led strategic sourcing and vendor management efforts that drove meaningful cost savings and improved compliance.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE HIGHLIGHTS -->
+<section class="alt">
+  <div class="wrap">
+    <h2 class="section">Experience Highlights</h2>
+    <div class="hl-grid">
+      <div class="hl">Led a 150+ person construction team on refinery and petrochemical projects, managing crews, planning, and unit start-ups.</div>
+      <div class="hl">Built a new commercial team from scratch inside a major energy company and created a training program that ran for seven years across five countries.</div>
+      <div class="hl">Negotiated complex contracts with governments, joint venture partners, and commercial counterparties across multiple industries and geographies.</div>
+      <div class="hl">Led strategic sourcing and vendor management efforts that drove meaningful cost savings and improved compliance.</div>
+      <div class="hl">Co-founded and operated a wellness business, handling daily operations, hiring, service delivery, and customer relationships.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT SELLERS CAN EXPECT -->
+<section>
+  <div class="wrap">
+    <h2 class="section">What Sellers <em>Can Expect</em></h2>
+    <div class="sell-grid">
+      <div class="sell">
+        <h3>Steady Under Pressure</h3>
+        <p>Kishore stays calm when things get complicated. Whether it is a tough negotiation or an unfamiliar operation, he listens first, finds what is really going on, and builds a plan to fix it.</p>
+      </div>
+      <div class="sell">
+        <h3>Systems Builder</h3>
+        <p>He does not rely on memory or heroics to run things. He builds routines, processes, and accountability so the business works because of the system, not because of one person.</p>
+      </div>
+      <div class="sell">
+        <h3>People-First Leader</h3>
+        <p>He cares about paying people fairly, recognizing real performance, and creating a culture where problems get raised early and solved honestly.</p>
+      </div>
+    </div>
+    <div class="quote">
+      <p>&ldquo;Kishore wants to step into a business that already works and build on what is already there, bringing calm leadership, strong systems, and a genuine commitment to the people who made this business successful. His goal is to protect what the seller built, create growth, and carry the business forward in a way his family and employees can feel proud of. At its heart, this is also personal. Kishore wants to show his children that following your convictions and betting on what you believe in ultimately pays off.&rdquo;</p>
+    </div>
+  </div>
+</section>
+
+<!-- ACQUISITION CRITERIA -->
+<section class="alt" id="criteria">
+  <div class="wrap">
+    <h2 class="section">Acquisition <em>Criteria</em></h2>
+    <div class="crit-grid">
+      <div>
+        <div class="label crit-label">Deal Parameters</div>
+        <div class="row"><div class="k">Acquisition Range</div><div class="v">Up to $6MM</div></div>
+        <div class="row"><div class="k">Minimum SDE</div><div class="v"><span>Seeking established businesses with strong, consistent cash flow, ideally with a minimum of</span> $375K SDE (post-debt).</div></div>
+        <div class="label crit-label">Team &amp; Operations</div>
+        <div class="row"><div class="k">Team Size</div><div class="v"><span>Wants a real team in place with crew leads or supervisors, and a clear path to develop a strong second-in-command within the first couple of years.</span></div></div>
+        <div class="row"><div class="k">Owner Role</div><div class="v"><span>Fully hands-on from day one. Plans to split time between the field and the office, getting close to the operation, the team, and customers right away.</span></div></div>
+        <div class="row"><div class="k">Operations</div><div class="v"><span>Wants a stable, physical operation with steady growth and visible ways to improve results through better scheduling, pricing, and systems. Prefers businesses with at least 4&ndash;5 years of history that have proven they can survive a downturn.</span></div></div>
+        <div class="row"><div class="k">Avoid</div><div class="v"><span>Single customer &gt;25% of revenue, or top 3 &gt;50%. Exception for a dominant customer if the revenue is contractual and transferable (multi-year, assignable) and spread across multiple, independently-deciding locations. For top-3 concentration, exception if that revenue is contractual and transferable.</span></div></div>
+        <div class="label crit-label">Customer Model</div>
+        <div class="row"><div class="k">Customer Type</div><div class="v"><span>Strongly prefers B2B customers with contracts or recurring agreements. Open to B2C only if the business has strong structure and does not depend on constant consumer marketing.</span></div></div>
+      </div>
+      <div class="geo">
+        <span class="label" style="color:#8A867C">Target Geography</span>
+        <h3>Greater Houston, including Katy, Sugar Land, Cypress, Spring, and the Energy Corridor, ideally within about 45 minutes of Katy</h3>
+        <div class="pills">
+          <span class="pill-tag">Open to Austin</span>
+          <span class="pill-tag">San Antonio</span>
+          <span class="pill-tag">Dallas-Fort Worth on a case-by-case basis</span>
+        </div>
+        <p>Will consider secondary Texas markets like Beaumont, Bryan/College Station, and Victoria if the business is a strong fit. Open to relocating within Texas for the right opportunity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRY FIT -->
+<section>
+  <div class="wrap">
+    <h2 class="section">Industry <em>Fit</em></h2>
+    <div class="ind-grid">
+      <div>
+        <span class="label" style="color:#8A867C">Top Industry Interests</span>
+        <ul class="ind-list">
+          <li>Commercial Cleaning and Facilities</li>
+          <li>Commercial Landscaping</li>
+          <li>Industrial Maintenance Services</li>
+          <li>B2B Distribution and Wholesale</li>
+          <li>Service Trades (Electrical, HVAC)</li>
+          <li>B2B Technology Services</li>
+          <li>Property and HOA Management</li>
+        </ul>
+      </div>
+      <div>
+        <span class="label" style="color:#8A867C">Exclusions</span>
+        <ul class="ind-list ex-list">
+          <li>Restaurants and Food Service</li>
+          <li>Retail Storefronts</li>
+          <li>Franchises</li>
+          <li>Cannabis</li>
+          <li>Adult-Oriented Entertainment</li>
+          <li>Online-Only Businesses</li>
+        </ul>
+        <p class="ind-note">Not interested in e-commerce or online-only businesses. Open to B2B technology services like managed IT if the business has a real team, physical presence, and diversified contracts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSITION -->
+<section class="alt">
+  <div class="wrap">
+    <h2 class="section">Owner <em>Transition</em> Approach</h2>
+    <div class="tr-grid">
+      <div class="tr">
+        <h3>Flex</h3>
+        <span class="label">Transition Window</span>
+        <p>Flexible on transition timing and happy to work with the seller on whatever schedule makes sense for the business and team.</p>
+      </div>
+      <div class="tr">
+        <h3>Day 1</h3>
+        <span class="label">On-Site From the Start</span>
+        <p>Fully hands-on from day one. Plans to split time between the field and the office, getting close to the operation, the team, and customers right away.</p>
+      </div>
+      <div class="tr">
+        <h3>Long</h3>
+        <span class="label">Term Ownership Vision</span>
+        <p>Build a business that runs well with strong systems and a capable team, creating stability for his family and long-term value for employees and customers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div>
+      <span class="label">Next Step</span>
+      <h2>If Your Business Fits This Profile, <em>Kishore Is Ready to Talk.</em></h2>
+    </div>
+    <div class="btns">
+      <a class="btn primary" href="mailto:kishoregarimella@anukipartners.com">Connect With Kishore &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="bar foot">
+  <div class="wrap">
+    <span class="label">Anuki Partners</span>
+    <span class="mid">&copy; 2026 All rights reserved.</span>
+    <span class="label">&#10003; Buyer Profile</span>
+  </div>
+</div>
+
+</body>
+</html>
